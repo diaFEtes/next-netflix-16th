@@ -1,12 +1,7 @@
 import Footer from "../components/common/Footer";
 import styled from "styled-components";
-import { IMovieInfo } from "../../public/interface";
-import {
-  getNowPlaying,
-  getTopRated,
-  getPopular,
-  getUpComing,
-} from "../../public/api";
+import { IMovieInfo } from "../interface";
+import { getNowPlaying, getTopRated, getPopular, getUpComing } from "../api";
 import MovieList from "../components/home/MovieList";
 import TextInfo from "../components/home/TextInfo";
 import FirstMovie from "../components/home/FirstMovie";

@@ -1,6 +1,6 @@
 import Footer from "../components/common/Footer";
-import { getTopSearches } from "../../public/api";
-import { IMovieInfo } from "../../public/interface";
+import { getTopSearches } from "../api";
+import { IMovieInfo } from "../interface";
 import Link from "next/link";
 
 interface SearchProps {

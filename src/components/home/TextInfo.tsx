@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { ITextInfo } from "../../../public/interface";
+import styled from "styled-components";
+import { ITextInfo } from "../../interface";
 
 export default function TextInfo({ name, isPreview }: ITextInfo) {
   return <Container isPreview={isPreview}>{name}</Container>;

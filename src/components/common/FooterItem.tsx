@@ -1,4 +1,4 @@
-import { IFooter } from "../../../public/interface";
+import { IFooter } from "../../interface";
 import Image from "next/image";
 import styled from "styled-components";
 
