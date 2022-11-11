@@ -32,3 +32,8 @@ export interface ITextInfo{
     name: string;
     isPreview: boolean;
 }
+
+export interface IMovieList{
+    movies: IMovieInfo[];
+    isPreview: boolean;
+}
