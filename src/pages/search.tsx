@@ -1,7 +1,6 @@
 import Footer from "../components/common/Footer";
-import { useState, useEffect } from "react";
-import { getTopSearches } from "../api/Movies";
-import { IMovieInfo } from "../interfaces/interface";
+import { getTopSearches } from "../../public/api";
+import { IMovieInfo } from "../../public/interface";
 import Link from "next/link";
 
 interface SearchProps {
