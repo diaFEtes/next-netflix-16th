@@ -2,11 +2,29 @@
 import { useState, useEffect } from "react";
 
 export function GetScreenWidth() {
-  const [screenWidth, setScreenWidth] = useState(375);
+  const [windowWidth, setWindowWidth] = useState(0)
+  console.log('1')
+
+  // resize 될때만 함수 불러오기
+  let timer:NodeJS.Timeout
+  const resizeWindow = () => {
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      // 현재 window width 값
+      setWindowWidth(window.innerWidth)
+      console.log('2')
+    }, 500)
+  }
 
   useEffect(() => {
-    setScreenWidth(window.screen.width);
-  }, []);
+    setWindowWidth(window.innerWidth)
+    window.addEventListener("resize", resizeWindow)
+    console.log('3')
+    return () => {
+      window.removeEventListener("resize", resizeWindow)
+      console.log('4')
+    }
+  }, [windowWidth])
 
-  return screenWidth;
+  return windowWidth;
 }
